@@ -17,7 +17,7 @@ const ChatWindow = () => {
      socket.on("receive_message", handleMessage);
 
      return () => {
-     socket.off("receive_message", handleMessage); // ✅ IMPORTANT
+     socket.off("receive_message", handleMessage); 
      };
     } , []);
 
@@ -37,12 +37,12 @@ const ChatWindow = () => {
     return (
     <div className="w-3/4 flex flex-col bg-gray-100">
       
-      {/* Header */}
+      
       <div className="p-4 bg-white shadow">
         <h2 className="font-bold">Chat</h2>
       </div>
 
-      {/* Messages */}
+      
       <div className="flex-1 p-4 overflow-y-auto space-y-3">
         {messages.map((msg, i) => (
           <div
@@ -66,7 +66,7 @@ const ChatWindow = () => {
         ))}
       </div>
 
-      {/* Input */}
+      
       <div className="p-3 bg-white flex gap-2">
         <input
           value={message}
