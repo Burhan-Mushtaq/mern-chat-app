@@ -4,27 +4,19 @@ A full-stack real-time chat application built using the MERN stack and Socket.io
 
 ---
 
-## 🚀 Features
+Features:
+- 🔐 User Authentication (Login/Signup)
+- 💬 Real-time messaging using Socket.io
+- 💾 MongoDB message storage
+- 🟢 Online/Offline user status
+- 📩 Unread message count
+- 💬 Last message preview
+- ⏱️ Message timestamps
+- ⚡ Smooth chat UI (WhatsApp-inspired)
 
-- 🔐 Real-time messaging with Socket.io
-- 👥 Private chat using rooms
-- ⚡ Instant message delivery
-- 💬 WhatsApp-inspired UI
-- 🔄 Live connection handling
-- 🧠 Event-driven architecture
-
----
-
-## 🛠️ Tech Stack
-
-### Frontend:
-- React (Vite)
-- Tailwind CSS
-- Socket.io-client
-
-### Backend:
-- Node.js
-- Express.js
-- Socket.io
-
+Tech Stack:
+- Frontend: React + Tailwind CSS
+- Backend: Node.js + Express
+- Database: MongoDB
+- Realtime: Socket.io
 ---
