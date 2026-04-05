@@ -3,14 +3,18 @@ const http = require("http");
 const { Server } = require("socket.io");
 const mongoose = require("mongoose");
 const cors = require("cors");
+const dotenv = require('dotenv');
 
 const Message = require("./models/Message");
 const messageRoutes = require("./routes/messageRoutes")
 const authRoutes = require("./routes/authRoutes");
 const userRoutes = require("./routes/userRoutes");
 
+
 const app = express();
 app.use(express.json());
+
+dotenv.config();
 
 app.use(cors({
   origin: "http://localhost:5173",
@@ -21,7 +25,7 @@ app.use("/api/messages", messageRoutes);
 app.use("/api/auth", authRoutes);
 app.use("/api/users", userRoutes);
 
-mongoose.connect("mongodb://127.0.0.1:27017/chat-app")
+mongoose.connect(process.env.MONGO_URI)
   .then(() => console.log("MongoDB Connected"))
   .catch((err) => console.log(err));
 
